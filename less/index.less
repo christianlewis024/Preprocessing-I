@@ -4,56 +4,390 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: square;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
+// new stuff here
+
+//
+
+// Here will be the syntax
+@main-color: rgb(8, 148, 55);
+
+@accent-color: #0ab60a;
+@main-font: "Righteous", cursive;
+@heading-font: "Sriracha", cursive;
+@list-font: "Odibee Sans", cursive;
+
+//
+
+@main-color: white;
+
+.topSection {
+  background-image: url("/img/banner.png");
+  height: 30%;
+  color: white;
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.nameAndTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16%;
+  margin-bottom: 2%;
+
+  width: 35%;
+  height: 20%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.137);
+  margin-top: 7%;
+  letter-spacing: 0.5em;
+
+  @media (max-width: 515px) {
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+  }
+}
+h1 {
+  font-size: 3em;
+  font-family: @main-font;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: @heading-font;
+}
+
+h3 {
+  font-family: @heading-font;
+  letter-spacing: 0.3em;
+}
+h4 {
+  font-family: @heading-font;
+}
+p {
+  font-family: @list-font;
+}
+
+ul {
+  font-family: @list-font;
+  color: @accent-color;
+}
+nav {
+  display: flex;
+  background-color: rgba(8, 146, 77, 0.589);
+  justify-content: center;
+  padding-bottom: 1%;
+
+  width: 100%;
+  @media (max-width: 515px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+nav a {
+  font-size: 1.5em;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.portfolioPicture {
+  width: 20%;
+  height: 80%;
+  border-radius: 50%;
+  display: flex;
+  margin-left: 8%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+.middleSection {
+  display: flex;
+  line-height: 1.5em;
+}
+.middleSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5%;
+  margin-left: 10%;
+  justify-content: space-around;
+}
+.one {
+  margin-top: 1%;
+  width: 45%;
+  @media (max-width: 515px) {
+    width: 60%;
+  }
+}
+.two {
+  width: 45%;
+  margin-bottom: 5%;
+  @media (max-width: 515px) {
+    width: 60%;
+  }
+}
+.three {
+  width: 45%;
+  @media (max-width: 515px) {
+    width: 60%;
+  }
+}
+.four {
+  width: 45%;
+  margin-bottom: 5%;
+  @media (max-width: 515px) {
+    width: 60%;
+  }
+}
+.five {
+  width: 45%;
+  @media (max-width: 515px) {
+    width: 60%;
+  }
+}
+.six {
+  width: 45%;
+  @media (max-width: 515px) {
+    width: 60%;
+  }
+}
+.references {
+  display: flex;
+
+  width: 100%;
+  margin-left: 16%;
+  @media (max-width: 515px) {
+    margin-left: 15%;
+  }
+}
+.references .h2 {
+  display: flex;
+  font-family: @main-font;
+  font-size: 0.5em;
+}
+.referencesNames {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+  margin-left: 5%;
+  color: @accent-color;
+}
+.referencesNames p {
+  @media (max-width: 515px) {
+    width: 100%;
+    margin-right: 25%;
+  }
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  align-items: center;
+  color: white;
+  letter-spacing: 0.1em;
+  @media (max-width: 515px) {
+    flex-direction: column;
+    margin-bottom: 10%;
+
+    justify-content: center;
+  }
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 10%;
+  @media (max-width: 515px) {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 55%;
+  }
+}
+.address {
+  line-height: 0;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  @media (max-width: 515px) {
+    line-height: 1.5em;
+    width: 55%;
+  }
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  @media (max-width: 515px) {
+    width: 55%;
+  }
+}
+.fab {
+  font-size: 60px;
+}
+.fas {
+  font-size: 60px;
+}
+.bowie {
+  width: 45%;
+}
